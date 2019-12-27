@@ -1,6 +1,6 @@
 function collect_same_elements(collection_a, object_b) {
   var collectionB = getElemsByAttributeName(object_b, "value");
-  return collectSameElemsOneDim(collection_a,collectionB);
+  return collectSameElemsOneDim(collection_a, collectionB);
 }
 
 function getElemsByAttributeName(collectionObj, attrStr) {
