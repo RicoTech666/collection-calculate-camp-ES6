@@ -14,4 +14,5 @@ function getMathcedSubArr(collection, element) {
   }, []);
   return matchedSubArr;
 }
+
 module.exports = calculate_elements_sum;
