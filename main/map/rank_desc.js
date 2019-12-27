@@ -1,7 +1,7 @@
 'use strict';
 var rank_desc = function(collection){
   return collection.sort(function(leftNum,rightNum) {
-    return rightNum-leftNum;
+    return leftNum - rightNum;
   });
 };
 
