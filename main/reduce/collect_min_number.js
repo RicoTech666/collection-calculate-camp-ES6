@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 function collect_min_number(collection) {
   return collection.reduce(function(maxElem, elem) {
@@ -7,4 +7,3 @@ function collect_min_number(collection) {
 }
 
 module.exports = collect_min_number;
-
