@@ -1,8 +1,12 @@
-'use strict';
+"use strict";
 
 function amount_even(collection) {
-
-  //在这里写入代码
+  return collection.reduce((sumEven, collectionElem) => {
+    if (0 === collectionElem % 2) {
+      sumEven += collectionElem;
+    }
+    return sumEven;
+  }, 0);
 }
 
 module.exports = amount_even;
