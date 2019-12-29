@@ -1,8 +1,12 @@
-'use strict';
+"use strict";
 
 function even_to_letter(collection) {
-
-  //在这里写入代码
+  return collection.reduce(function(letterArr, collectionElem) {
+    if (0 === collectionElem % 2) {
+      letterArr.push(String.fromCharCode(collectionElem + 96));
+    }
+    return letterArr;
+  }, []);
 }
 
 module.exports = even_to_letter;
