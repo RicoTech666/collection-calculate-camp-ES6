@@ -2,7 +2,6 @@
 function rank_by_two_large_one_small(collection) {
   var ascArr = rankAsc(collection);
   var index = 0;
-  console.log(ascArr);
   while (index < ascArr.length - 2) {
     swapElemsInArray(ascArr, index, index + 1);
     swapElemsInArray(ascArr, index + 1, index + 2);
