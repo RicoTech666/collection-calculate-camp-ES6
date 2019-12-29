@@ -1,9 +1,15 @@
-'use strict';
+"use strict";
 
 function average_to_letter(collection) {
+  return String.fromCharCode(getAverage(collection) + 96);
+}
 
-  //在这里写入代码
+function getAverage(collection) {
+  var sum = collection.reduce(function(average, collectionElem) {
+    average += collectionElem;
+    return average;
+  });
+  return Math.ceil(sum / collection.length);
 }
 
 module.exports = average_to_letter;
-
