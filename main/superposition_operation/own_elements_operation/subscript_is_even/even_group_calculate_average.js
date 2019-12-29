@@ -1,7 +1,7 @@
 "use strict";
 
 var even_group_calculate_average = function(collection) {
-  var evenArr = getEvenIndexElems(collection);
+  var evenArr = getEventhElems(collection);
   if (!checkIfContainedEvenElems(evenArr)) {
     return [0];
   } else {
@@ -11,7 +11,7 @@ var even_group_calculate_average = function(collection) {
   }
 };
 
-function getEvenIndexElems(originalArr) {
+function getEventhElems(originalArr) {
   var evenIndexArr = [];
   for (let index = 0; index < originalArr.length; index++) {
     const elem = originalArr[index];
