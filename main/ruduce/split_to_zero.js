@@ -2,7 +2,7 @@
 
 function spilt_to_zero(number, interval) {
   var isZero = canBeSplitToZero(number, interval);
-  return generateSplitArr(number, interval, isZero);
+  return generateSplittedArr(number, interval, isZero);
 }
 
 function canBeSplitToZero(number, interval) {
@@ -11,22 +11,22 @@ function canBeSplitToZero(number, interval) {
   return 0 === numberInt % intervalInt;
 }
 
-function generateSplitArr(number, interval, canBeSplitedToZero) {
-  var splitedArr = [];
+function generateSplittedArr(number, interval, canBeSplitedToZero) {
+  var splittedArr = [];
   var numberInt = toInt(number);
   var intervalInt = toInt(interval);
   if (canBeSplitedToZero) {
     while (numberInt >= 0) {
-      splitedArr.push(toFloat(numberInt));
+      splittedArr.push(toFloat(numberInt));
       numberInt -= intervalInt;
     }
   } else {
     while (numberInt > -intervalInt) {
-      splitedArr.push(toFloat(numberInt));
+      splittedArr.push(toFloat(numberInt));
       numberInt -= intervalInt;
     }
   }
-  return splitedArr;
+  return splittedArr;
 }
 
 function toInt(num) {
