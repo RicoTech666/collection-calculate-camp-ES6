@@ -1,8 +1,7 @@
 "use strict";
 var single_element = function(collection) {
   var eventhArr = getEventhElems(collection);
-  var singleElements = findDistinctElems(eventhArr);
-  return singleElements;
+  return findDistinctElems(eventhArr);
 };
 
 function getEventhElems(originalArr) {

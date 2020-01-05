@@ -1,8 +1,7 @@
 "use strict";
 var even_asc_odd_desc = function(collection) {
-  var evenSubAsc = rankAsc(getEvenElems(collection));
-  console.log(evenSubAsc);
-  var oddSubDesc = rankDesc(getOddElems(collection));
+  var evenSubAsc = rankAsc(getElems(collection, "even"));
+  var oddSubDesc = rankDesc(getElems(collection, "odd"));
   var evenAscOddDesc = evenSubAsc;
   while (0 !== oddSubDesc.length) {
     evenAscOddDesc.push(oddSubDesc.shift());
@@ -10,26 +9,17 @@ var even_asc_odd_desc = function(collection) {
   return evenAscOddDesc;
 };
 
-function getEvenElems(arr) {
-  var evenArr = [];
+function getElems(arr, str) {
+  var returnedArr = [];
   for (let i = 0; i < arr.length; i++) {
     const elem = arr[i];
-    if (0 === elem % 2) {
-      evenArr.push(elem);
+    if (0 === elem % 2 && "even" === str) {
+      returnedArr.push(elem);
+    } else if (0 !== elem % 2 && "odd" === str) {
+      returnedArr.push(elem);
     }
   }
-  return evenArr;
-}
-
-function getOddElems(arr) {
-  var evenArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    const elem = arr[i];
-    if (0 !== elem % 2) {
-      evenArr.push(elem);
-    }
-  }
-  return evenArr;
+  return returnedArr;
 }
 
 function rankAsc(collection) {
