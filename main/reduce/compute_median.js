@@ -5,10 +5,9 @@ function compute_median(collection) {
   return getMedianFromArr(sortedArr);
 }
 function sortArrAsc(arrUnsorted) {
-  var arrSorted = arrUnsorted.sort(function(leftNum, rightNum) {
+  return arrUnsorted.sort(function(leftNum, rightNum) {
     return rightNum - leftNum;
   });
-  return arrSorted;
 }
 
 function getMedianFromArr(arrSorted) {

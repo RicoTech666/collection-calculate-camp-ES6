@@ -7,15 +7,13 @@ function compute_chain_median(collection) {
 }
 
 function getArrayFromChain(strChain) {
-  var arr = strChain.split("->").map(Number);
-  return arr;
+  return strChain.split("->").map(Number);
 }
 
 function sortArrAsc(arrUnsorted) {
-  var arrSorted = arrUnsorted.sort(function(leftNum, rightNum) {
+  return arrUnsorted.sort(function(leftNum, rightNum) {
     return rightNum - leftNum;
   });
-  return arrSorted;
 }
 
 function getMedianFromArr(arrSorted) {
