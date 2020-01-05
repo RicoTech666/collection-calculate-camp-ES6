@@ -49,9 +49,7 @@ function isColon(str) {
 }
 
 function processDash(str) {
-  var dashArr = [];
-  dashArr = str.split("-");
-  return dashArr;
+  return str.split("-");
 }
 
 function processBrackets(str) {
@@ -62,9 +60,7 @@ function processBrackets(str) {
 }
 
 function processColon(str) {
-  var colonArr = [];
-  colonArr = str.split(":");
-  return colonArr;
+  return str.split(":");
 }
 
 function countObjToObjArray(countedObj) {
