@@ -1,18 +1,14 @@
 "use strict";
 
 function spilt_to_zero(number, interval) {
-  var isZero = canBeSplitedToZero(number, interval);
+  var isZero = canBeSplitToZero(number, interval);
   return generateSplitArr(number, interval, isZero);
 }
 
-function canBeSplitedToZero(number, interval) {
+function canBeSplitToZero(number, interval) {
   var numberInt = toInt(number);
   var intervalInt = toInt(interval);
-  if (0 === numberInt % intervalInt) {
-    return true;
-  } else {
-    return false;
-  }
+  return 0 === numberInt % intervalInt;
 }
 
 function generateSplitArr(number, interval, canBeSplitedToZero) {
