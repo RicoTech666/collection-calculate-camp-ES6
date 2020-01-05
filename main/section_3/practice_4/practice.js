@@ -12,10 +12,10 @@ function create_updated_collection(collection_a, object_b) {
 
 function count_same_elements(collection) {
   var countedObjFromCollection = countArrToObj(collection);
-  var objArrayDashTransfered = transferDashNumberToValue(
+  var objArrayDashTransferred = transferDashNumberToValue(
     countedObjFromCollection
   );
-  return countObjToObjArray(objArrayDashTransfered);
+  return countObjToObjArray(objArrayDashTransferred);
 }
 
 function countArrToObj(arr) {
@@ -29,8 +29,8 @@ function countArrToObj(arr) {
   }, {});
 }
 
-function transferDashNumberToValue(objNeedToBeTransfered) {
-  var arrObj = objNeedToBeTransfered;
+function transferDashNumberToValue(objNeedToBeTransferred) {
+  var arrObj = objNeedToBeTransferred;
   for (var key in arrObj) {
     if (-1 !== key.indexOf("-")) {
       var newKey = key.split("-")[0];
