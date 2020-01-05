@@ -1,6 +1,6 @@
 function collect_same_elements(collection_a, object_b) {
   var arrAOneDim = getKeysFromObjectArray(collection_a);
-  var arrBOneDim = getElemsByAttributeName(object_b, "value");
+  var arrBOneDim = object_b["value"];
   return collectSameElemsOneDim(arrAOneDim, arrBOneDim);
 }
 
@@ -10,14 +10,10 @@ function getKeysFromObjectArray(ObjectArray) {
   });
 }
 
-function getElemsByAttributeName(arrObj, attrStr) {
-  return arrObj[attrStr];
-}
-
 function collectSameElemsOneDim(collection_a, collection_b) {
   var theSameElems = [];
   for (var i = 0; i < collection_a.length; i++) {
-    if (-1 != collection_b.indexOf(collection_a[i])) {
+    if (-1 !== collection_b.indexOf(collection_a[i])) {
       theSameElems.push(collection_a[i]);
     }
   }
