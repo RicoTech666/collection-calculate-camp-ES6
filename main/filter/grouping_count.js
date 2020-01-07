@@ -1,7 +1,7 @@
 "use strict";
 
 function grouping_count(collection) {
-  return collection.reduce(function(groupCount, elem) {
+  return collection.reduce((groupCount, elem) => {
     if (elem in groupCount) {
       groupCount[elem]++;
     } else {
