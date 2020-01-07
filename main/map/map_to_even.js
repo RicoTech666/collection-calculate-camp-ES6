@@ -1,6 +1,6 @@
 "use strict";
 function map_to_even(collection) {
-  return collection.map(function(elem) {
+  return collection.map(elem => {
     return 2 * elem;
   });
 }

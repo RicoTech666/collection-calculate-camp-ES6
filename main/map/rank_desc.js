@@ -1,6 +1,6 @@
-'use strict';
-var rank_desc = function(collection){
-  return collection.sort(function(leftNum,rightNum) {
+"use strict";
+var rank_desc = function(collection) {
+  return collection.sort((leftNum, rightNum) => {
     return leftNum - rightNum;
   });
 };
