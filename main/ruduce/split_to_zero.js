@@ -1,20 +1,20 @@
 "use strict";
 
 function spilt_to_zero(number, interval) {
-  var isZero = canBeSplitToZero(number, interval);
+  const isZero = canBeSplitToZero(number, interval);
   return generateSplittedArr(number, interval, isZero);
 }
 
 function canBeSplitToZero(number, interval) {
-  var numberInt = toInt(number);
-  var intervalInt = toInt(interval);
+  const numberInt = toInt(number);
+  const intervalInt = toInt(interval);
   return 0 === numberInt % intervalInt;
 }
 
 function generateSplittedArr(number, interval, canBeSplitedToZero) {
-  var splittedArr = [];
-  var numberInt = toInt(number);
-  var intervalInt = toInt(interval);
+  let splittedArr = [];
+  let numberInt = toInt(number);
+  const intervalInt = toInt(interval);
   if (canBeSplitedToZero) {
     while (numberInt >= 0) {
       splittedArr.push(toFloat(numberInt));

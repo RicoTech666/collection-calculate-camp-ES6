@@ -1,7 +1,7 @@
 "use strict";
 
 function compute_chain_median(collection) {
-  let arr = getArrayFromChain(collection);
+  const arr = getArrayFromChain(collection);
   let sortedArr = sortArrAsc(arr);
   return getMedianFromArr(sortedArr);
 }
