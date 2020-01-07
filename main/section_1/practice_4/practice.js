@@ -1,23 +1,8 @@
 function collect_same_elements(collection_a, object_b) {
-  var arrAOneDim = getKeysFromObjectArray(collection_a);
-  var arrBOneDim = object_b["value"];
-  return collectSameElemsOneDim(arrAOneDim, arrBOneDim);
-}
+  const collectionA = collection_a.map(currentObj => currentObj.key);
+  const collectionB = object_b["value"];
 
-function getKeysFromObjectArray(ObjectArray) {
-  return ObjectArray.map(function(currentObj) {
-    return currentObj.key;
-  });
-}
-
-function collectSameElemsOneDim(collection_a, collection_b) {
-  var theSameElems = [];
-  for (var i = 0; i < collection_a.length; i++) {
-    if (-1 !== collection_b.indexOf(collection_a[i])) {
-      theSameElems.push(collection_a[i]);
-    }
-  }
-  return theSameElems;
+  return collectionA.filter(elem => collectionB.includes(elem));
 }
 
 module.exports = collect_same_elements;
