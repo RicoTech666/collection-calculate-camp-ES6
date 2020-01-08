@@ -28,10 +28,4 @@ function rankAsc(collection) {
   });
 }
 
-function rankDesc(collection) {
-  return collection.sort((leftNum, rightNum) => {
-    return rightNum - leftNum;
-  });
-}
-
 module.exports = even_asc_odd_desc;
