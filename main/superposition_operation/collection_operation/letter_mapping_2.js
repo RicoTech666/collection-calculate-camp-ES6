@@ -5,7 +5,7 @@ function average_to_letter(collection) {
 }
 
 function getAverage(collection) {
-  var sum = collection.reduce(function(average, collectionElem) {
+  let sum = collection.reduce((average, collectionElem) => {
     average += collectionElem;
     return average;
   });

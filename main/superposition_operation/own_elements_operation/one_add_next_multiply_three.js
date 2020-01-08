@@ -1,6 +1,6 @@
 "use strict";
 function one_add_next_multiply_three(collection) {
-  var computedArr = [];
+  let computedArr = [];
   for (let i = 0; i < collection.length; i++) {
     if (i <= collection.length - 2) {
       const currentElem = collection[i];

@@ -1,24 +1,24 @@
 "use strict";
 
 function median_to_letter(collection) {
-  var medianVal = compute_median(collection);
+  let medianVal = compute_median(collection);
   return mapLetterOver26(medianVal);
 }
 
 function compute_median(collection) {
-  var sortedArr = sortArrAsc(collection);
+  let sortedArr = sortArrAsc(collection);
   return getMedianFromArr(sortedArr);
 }
 
 function sortArrAsc(arrUnsorted) {
-  return arrUnsorted.sort(function(leftNum, rightNum) {
+  return arrUnsorted.sort((leftNum, rightNum) => {
     return rightNum - leftNum;
   });
 }
 
 function getMedianFromArr(arrSorted) {
-  var arrLen = arrSorted.length;
-  var medianOfArr;
+  let arrLen = arrSorted.length;
+  let medianOfArr;
   if (0 === arrLen % 2) {
     medianOfArr = (arrSorted[arrLen / 2] + arrSorted[arrLen / 2 - 1]) / 2;
   } else {
@@ -28,7 +28,7 @@ function getMedianFromArr(arrSorted) {
 }
 
 function mapLetterOver26(medianVal) {
-  var letterLen = 26;
+  let letterLen = 26;
   if (medianVal <= letterLen) {
     return String.fromCharCode(elem + 96);
   } else if (medianVal <= letterLen * 2) {

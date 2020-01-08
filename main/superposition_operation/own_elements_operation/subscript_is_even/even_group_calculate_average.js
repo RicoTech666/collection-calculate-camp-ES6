@@ -1,51 +1,21 @@
 "use strict";
 
 var even_group_calculate_average = function(collection) {
-  var evenArr = getEventhElems(collection);
-  if (!checkIfContainedEvenElems(evenArr)) {
+  let eventhArr = collection.filter((elem, index) => 0 !== index % 2);
+  let evenElemsArr = eventhArr.filter(elem => 0 === elem % 2);
+  if (0 === evenElemsArr.length) {
     return [0];
   } else {
-    var arrReallocated = reallocateByNumberLength(getEvenElems(evenArr));
-    var avgArr = calculate2DArrAverage(arrReallocated);
+    let arrReallocated = reallocateByNumberLength(evenElemsArr);
+    let avgArr = calculate2DArrAverage(arrReallocated);
     return avgArr;
   }
 };
 
-function getEventhElems(originalArr) {
-  var evenIndexArr = [];
-  for (let index = 0; index < originalArr.length; index++) {
-    const elem = originalArr[index];
-    if (0 !== index % 2) {
-      evenIndexArr.push(elem);
-    }
-  }
-  return evenIndexArr;
-}
-
-function getEvenElems(arr) {
-  var evenArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    const elem = arr[i];
-    if (0 === elem % 2) {
-      evenArr.push(elem);
-    }
-  }
-  return evenArr;
-}
-
-function checkIfContainedEvenElems(arr) {
-  var isContainedEven = false;
-  for (let i = 0; i < arr.length; i++) {
-    var elem = arr[i];
-    isContainedEven = isContainedEven || 0 === elem % 2;
-  }
-  return isContainedEven;
-}
-
 function reallocateByNumberLength(arr) {
-  var reallocatedArr = [[], [], []];
-  for (var i = 0; i < arr.length; i++) {
-    var elem = arr[i];
+  let reallocatedArr = [[], [], []];
+  for (let i = 0; i < arr.length; i++) {
+    let elem = arr[i];
     if (1 === elem.toString().length) {
       reallocatedArr[0].push(elem);
     } else if (2 === elem.toString().length) {
@@ -58,7 +28,7 @@ function reallocateByNumberLength(arr) {
 }
 
 function calculate2DArrAverage(twoDArr) {
-  var avgArr = [];
+  let avgArr = [];
   if (0 === twoDArr[0].length && 0 === twoDArr[1].length) {
     avgArr[0] = calculate1DArrAvg(twoDArr[2]);
   } else {
@@ -70,13 +40,11 @@ function calculate2DArrAverage(twoDArr) {
 }
 
 function calculate1DArrAvg(oneDArr) {
-  return oneDArr.reduce((avg, elem, index) => {
-    avg += elem;
-    if (index === oneDArr.length - 1) {
-      avg /= oneDArr.length;
-    }
-    return avg;
+  let sum = oneDArr.reduce((sum, elem) => {
+    sum += elem;
+    return sum;
   });
+  return sum / oneDArr.length;
 }
 
 module.exports = even_group_calculate_average;

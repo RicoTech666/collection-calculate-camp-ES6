@@ -1,7 +1,7 @@
 "use strict";
 var calculate_average = function(collection) {
-  var sum = 0;
-  var count = 0;
+  let sum = 0;
+  let count = 0;
   for (let i = 0; i < collection.length; i++) {
     if (0 !== i % 2) {
       sum += collection[i];

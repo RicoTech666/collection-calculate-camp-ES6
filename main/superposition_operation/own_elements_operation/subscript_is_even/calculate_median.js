@@ -1,23 +1,12 @@
 "use strict";
 var calculate_median = function(collection) {
-  var evenElemsArr = getEvenElems(collection);
+  let evenElemsArr = collection.filter(elem => 0 === elem % 2);
   return getMedianFromArr(evenElemsArr);
 };
 
-function getEvenElems(originalArr) {
-  var evenArr = [];
-  for (let index = 0; index < originalArr.length; index++) {
-    const elem = originalArr[index];
-    if (0 !== index % 2) {
-      evenArr.push(elem);
-    }
-  }
-  return evenArr;
-}
-
 function getMedianFromArr(arrSorted) {
-  var arrLen = arrSorted.length;
-  var medianOfArr;
+  let arrLen = arrSorted.length;
+  let medianOfArr;
   if (0 === arrLen % 2) {
     medianOfArr = (arrSorted[arrLen / 2] + arrSorted[arrLen / 2 - 1]) / 2;
   } else {

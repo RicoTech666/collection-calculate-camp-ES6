@@ -1,22 +1,11 @@
 "use strict";
 var single_element = function(collection) {
-  var eventhArr = getEventhElems(collection);
+  let eventhArr = collection.filter((elem, index) => 0 !== index % 2);
   return findDistinctElems(eventhArr);
 };
 
-function getEventhElems(originalArr) {
-  var evenIndexArr = [];
-  for (let index = 0; index < originalArr.length; index++) {
-    const elem = originalArr[index];
-    if (0 !== index % 2) {
-      evenIndexArr.push(elem);
-    }
-  }
-  return evenIndexArr;
-}
-
 function findDistinctElems(arr) {
-  var arrDinstinct = [];
+  let arrDinstinct = [];
   arr.forEach(elem => {
     if (arr.indexOf(elem) === arr.lastIndexOf(elem)) {
       arrDinstinct.push(elem);
