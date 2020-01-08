@@ -1,9 +1,11 @@
 function create_updated_collection(collection_a, object_b) {
-  var collectionACounted = count_same_elements(collection_a);
-  for (var i = 0; i < collectionACounted.length; i++) {
-    for (var j = 0; j < object_b.value.length; j++) {
+  let collectionACounted = count_same_elements(collection_a);
+  for (let i = 0; i < collectionACounted.length; i++) {
+    for (let j = 0; j < object_b.value.length; j++) {
       if (collectionACounted[i].key === object_b.value[j]) {
-        collectionACounted[i].count -= Math.floor(collectionACounted[i].count / 3);
+        collectionACounted[i].count -= Math.floor(
+          collectionACounted[i].count / 3
+        );
       }
     }
   }
@@ -11,12 +13,12 @@ function create_updated_collection(collection_a, object_b) {
 }
 
 function count_same_elements(collection) {
-  var countedObjFromCollection = countArrToObj(collection);
+  let countedObjFromCollection = countArrToObj(collection);
   return countObjToObjArray(countedObjFromCollection);
 }
 
 function countArrToObj(arr) {
-  return arr.reduce(function(allElems, elem) {
+  return arr.reduce((allElems, elem) => {
     if (elem in allElems) {
       allElems[elem]++;
     } else {
@@ -27,9 +29,9 @@ function countArrToObj(arr) {
 }
 
 function countObjToObjArray(countedObj) {
-  var objArray = [];
-  for (var key in countedObj) {
-    objArray.push({'key':key, 'count':countedObj[key]});
+  let objArray = [];
+  for (let key in countedObj) {
+    objArray.push({ key: key, count: countedObj[key] });
   }
   return objArray;
 }
