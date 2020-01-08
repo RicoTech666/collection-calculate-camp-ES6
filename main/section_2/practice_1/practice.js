@@ -1,10 +1,10 @@
 function count_same_elements(collection) {
-  var countedObjFromCollection = countArrToObj(collection);
+  let countedObjFromCollection = countArrToObj(collection);
   return countObjToObjArray(countedObjFromCollection);
 }
 
 function countArrToObj(arr) {
-  return arr.reduce(function(allElems, elem) {
+  return arr.reduce((allElems, elem) => {
     if (elem in allElems) {
       allElems[elem]++;
     } else {
@@ -15,9 +15,9 @@ function countArrToObj(arr) {
 }
 
 function countObjToObjArray(countedObj) {
-  var objArray = [];
-  for (var key in countedObj) {
-    objArray.push({'key':key, 'count':countedObj[key]});
+  let objArray = [];
+  for (let key in countedObj) {
+    objArray.push({ key: key, count: countedObj[key] });
   }
   return objArray;
 }

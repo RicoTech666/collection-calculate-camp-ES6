@@ -1,29 +1,28 @@
 function count_same_elements(collection) {
-  var countedObjFromCollection = countArrToObj(collection);
-
+  let countedObjFromCollection = countArrToObj(collection);
   return countObjToObjArray(countedObjFromCollection);
 }
 
 function countArrToObj(arr) {
-  return arr.reduce(function(allElems, elem) {
+  return arr.reduce((allElems, elem) => {
     if (elem in allElems) {
       allElems[elem]++;
     } else if (isDash(elem)) {
-      var dashArr = processDash(elem);
+      let dashArr = processDash(elem);
       if (dashArr[0] in allElems) {
         allElems[dashArr[0]] += parseInt(dashArr[1]);
       } else {
         allElems[dashArr[0]] = parseInt(dashArr[1]);
       }
     } else if (isBrackets(elem)) {
-      var bracketsArr = processBrackets(elem);
+      let bracketsArr = processBrackets(elem);
       if (bracketsArr[0] in allElems) {
         allElems[bracketsArr[0]] += parseInt(bracketsArr[1]);
       } else {
         allElems[bracketsArr[0]] = parseInt(bracketsArr[1]);
       }
     } else if (isColon(elem)) {
-      var colonArr = processColon(elem);
+      let colonArr = processColon(elem);
       if (colonArr[0] in allElems) {
         allElems[colonArr[0]] += parseInt(colonArr[1]);
       } else {
@@ -53,10 +52,7 @@ function processDash(str) {
 }
 
 function processBrackets(str) {
-  var bracketsArr = [];
-  bracketsArr[0] = str[0];
-  bracketsArr[1] = str.match(/\d+/)[0];
-  return bracketsArr;
+  return [str[0], str.match(/\d+/)[0]];
 }
 
 function processColon(str) {
@@ -64,8 +60,8 @@ function processColon(str) {
 }
 
 function countObjToObjArray(countedObj) {
-  var objArray = [];
-  for (var key in countedObj) {
+  let objArray = [];
+  for (let key in countedObj) {
     objArray.push({ name: key, summary: countedObj[key] });
   }
   return objArray;
