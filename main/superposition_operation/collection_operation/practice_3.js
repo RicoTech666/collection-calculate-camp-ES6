@@ -6,7 +6,7 @@ function hybrid_operation_to_uneven(collection) {
       hybridSumOfOdd += collectionElem * 3 + 5;
     }
     return hybridSumOfOdd;
-  }, 0);
+  }, 0); //TODO: 与上个类似
 }
 
 module.exports = hybrid_operation_to_uneven;

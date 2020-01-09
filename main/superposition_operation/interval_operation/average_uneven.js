@@ -9,7 +9,7 @@ function average_uneven(collection) {
       oddCount++;
     }
   }
-  return oddSum / oddCount;
+  return oddSum / oddCount; //TODO: 与上个类似
 }
 
 module.exports = average_uneven;

@@ -2,6 +2,7 @@
 
 function choose_divisible_integer(collection_a, collection_b) {
   return collection_a.filter(elem => includesDivisible(elem, collection_b));
+  //TODO: return collection_a.filter((value) => collection_b.some((item) => !(value % item)));
 }
 
 function includesDivisible(num, arr) {

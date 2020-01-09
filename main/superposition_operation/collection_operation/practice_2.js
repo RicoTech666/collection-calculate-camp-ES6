@@ -7,7 +7,7 @@ function hybrid_operation_to_uneven(collection) {
       result.push(collection[i] * 3 + 2);
     }
   }
-  return result;
+  return result; //TODO: 与上个类似
 }
 
 module.exports = hybrid_operation_to_uneven;

@@ -5,6 +5,8 @@ function spilt_to_zero(number, interval) {
   return generateSplittedArr(number, interval, isZero);
 }
 
+//TODO: 看Zhou Jiachen的这个
+
 function canBeSplitToZero(number, interval) {
   const numberInt = toInt(number);
   const intervalInt = toInt(interval);

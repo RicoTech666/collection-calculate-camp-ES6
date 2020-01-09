@@ -8,6 +8,6 @@ var calculate_average = function(collection) {
       count++;
     }
   }
-  return sum / count;
+  return sum / count; //TODO: filter + reduce
 };
 module.exports = calculate_average;

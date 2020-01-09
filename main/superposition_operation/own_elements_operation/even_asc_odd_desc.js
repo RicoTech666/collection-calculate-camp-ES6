@@ -9,6 +9,8 @@ var even_asc_odd_desc = function(collection) {
   return evenAscOddDesc;
 };
 
+//TODO: 看Wang Min的
+
 function getElems(arr, str) {
   let returnedArr = [];
   for (let i = 0; i < arr.length; i++) {

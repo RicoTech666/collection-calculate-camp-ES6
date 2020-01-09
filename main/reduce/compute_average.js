@@ -8,6 +8,8 @@ function compute_average(collection) {
     }
     return avg;
   });
+
+  //TODO: return collection.reduce((pre, cur) => pre + cur) / collection.length;
 }
 
 module.exports = compute_average;

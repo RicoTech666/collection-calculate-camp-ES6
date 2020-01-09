@@ -7,12 +7,12 @@ function compute_chain_median(collection) {
 }
 
 function getArrayFromChain(strChain) {
-  return strChain.split("->").map(Number);
+  return strChain.split("->").map(Number); // TODO：这个map写的优秀
 }
 
 function sortArrAsc(arrUnsorted) {
   return arrUnsorted.sort((leftNum, rightNum) => {
-    return rightNum - leftNum;
+    return rightNum - leftNum; // TODO：直接箭头函数，不需要return
   });
 }
 

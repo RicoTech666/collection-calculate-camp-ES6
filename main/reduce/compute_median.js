@@ -6,7 +6,7 @@ function compute_median(collection) {
 }
 function sortArrAsc(arrUnsorted) {
   return arrUnsorted.sort((leftNum, rightNum)=> {
-    return rightNum - leftNum;
+    return rightNum - leftNum; // TODO：直接箭头函数，不需要return
   });
 }
 

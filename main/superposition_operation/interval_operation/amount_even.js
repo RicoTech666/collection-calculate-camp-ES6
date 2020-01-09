@@ -6,7 +6,7 @@ function amount_even(collection) {
       sumEven += collectionElem;
     }
     return sumEven;
-  }, 0);
+  }, 0); //TODO: 与上个类似
 }
 
 module.exports = amount_even;

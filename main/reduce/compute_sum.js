@@ -2,7 +2,7 @@
 
 function calculate_elements_sum(collection) {
   return collection.reduce((sumOfArr, elem) => {
-    return (sumOfArr = sumOfArr + elem);
+    return (sumOfArr = sumOfArr + elem); // TODO：不需要sumOfArr =
   });
 }
 

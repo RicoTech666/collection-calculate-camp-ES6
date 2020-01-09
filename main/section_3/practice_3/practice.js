@@ -9,7 +9,7 @@ function create_updated_collection(collection_a, object_b) {
       }
     }
   }
-  return collectionACounted;
+  return collectionACounted; //TODO: incline variable
 }
 
 function count_same_elements(collection) {

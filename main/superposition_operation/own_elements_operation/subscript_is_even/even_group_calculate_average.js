@@ -11,6 +11,7 @@ var even_group_calculate_average = function(collection) {
     return avgArr;
   }
 };
+//TODO: 看下Wang Min的
 
 function reallocateByNumberLength(arr) {
   let reallocatedArr = [[], [], []];
