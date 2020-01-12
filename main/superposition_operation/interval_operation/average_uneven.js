@@ -1,15 +1,10 @@
 "use strict";
 
 function average_uneven(collection) {
-  let oddCount = 0;
-  let oddSum = 0;
-  for (let i = 0; i < collection.length; i++) {
-    if (0 !== collection[i] % 2) {
-      oddSum += collection[i];
-      oddCount++;
-    }
-  }
-  return oddSum / oddCount;
+  return (
+    collection.filter(val => val % 2).reduce((pre, cur) => pre + cur) /
+    (collection.length / 2)
+  );
 }
 
 module.exports = average_uneven;

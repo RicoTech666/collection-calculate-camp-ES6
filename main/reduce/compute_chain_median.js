@@ -11,9 +11,7 @@ function getArrayFromChain(strChain) {
 }
 
 function sortArrAsc(arrUnsorted) {
-  return arrUnsorted.sort((leftNum, rightNum) => {
-    return rightNum - leftNum;
-  });
+  return arrUnsorted.sort((leftNum, rightNum) => rightNum - leftNum);
 }
 
 function getMedianFromArr(arrSorted) {

@@ -1,15 +1,11 @@
 function create_updated_collection(collection_a, object_b) {
   let collectionACounted = count_same_elements(collection_a);
-  for (let i = 0; i < collectionACounted.length; i++) {
-    for (let j = 0; j < object_b.value.length; j++) {
-      if (collectionACounted[i].key === object_b.value[j]) {
-        collectionACounted[i].count -= Math.floor(
-          collectionACounted[i].count / 3
-        );
-      }
+  return collectionACounted.map(elem => {
+    if (object_b.value.includes(elem.key)) {
+      elem.count -= Math.floor(elem.count / 3);
     }
-  }
-  return collectionACounted;
+    return elem;
+  });
 }
 
 function count_same_elements(collection) {

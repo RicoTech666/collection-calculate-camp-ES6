@@ -40,11 +40,7 @@ function calculate2DArrAverage(twoDArr) {
 }
 
 function calculate1DArrAvg(oneDArr) {
-  let sum = oneDArr.reduce((sum, elem) => {
-    sum += elem;
-    return sum;
-  });
-  return sum / oneDArr.length;
+  return oneDArr.reduce((pre, cur) => pre + cur) / oneDArr.length;
 }
 
 module.exports = even_group_calculate_average;

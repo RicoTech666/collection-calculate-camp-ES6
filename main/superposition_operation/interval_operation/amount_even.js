@@ -1,12 +1,7 @@
 "use strict";
 
 function amount_even(collection) {
-  return collection.reduce((sumEven, collectionElem) => {
-    if (0 === collectionElem % 2) {
-      sumEven += collectionElem;
-    }
-    return sumEven;
-  }, 0);
+  return collection.filter(val => !(val % 2)).reduce((pre, cur) => pre + cur);
 }
 
 module.exports = amount_even;
